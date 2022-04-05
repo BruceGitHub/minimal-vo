@@ -1,0 +1,22 @@
+version: '2'
+
+services:
+  php:
+    image: brucegithub/minimal-vo:0.1.0
+    user: '1000'
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./..:/var/www/html
+    tty: true
+    stdin_open: true
+    environment:
+      XDG_CACHE_HOME: "./.cache/"
+
+  composer:
+    image: composer:2.1.9
+    command: ["composer", "install"]
+    user: '1000'
+    volumes:
+      - ./../:/app

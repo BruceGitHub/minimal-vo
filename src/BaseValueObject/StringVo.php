@@ -2,20 +2,25 @@
 
 declare(strict_types=1);
 
-namespace BaseValueObject\BaseValueObject;
+namespace MinimalVo\BaseValueObject;
 
 /**
-* @template-extends AbstractVo<string>
-*/ 
-class StringVo extends AbstractVo
+* @template-extends AbstractValueObject<string,StringVo>
+*/
+class StringVo extends AbstractValueObject
 {
-   public function equal($val): bool
-   {
-       return $this->value === $val;
-   }
-    
-   public function valid(): bool
-   {
-       return true; 
-   }
+    public function equal($vo): bool
+    {
+        return $this->value === $vo->vl();
+    }
+
+    public function duplicate()
+    {
+        return new self($this->value);
+    }
+
+    public function valid(): bool
+    {
+        return true;
+    }
 }

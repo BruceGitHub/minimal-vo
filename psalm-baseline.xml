@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files psalm-version="4.22.0@fc2c6ab4d5fa5d644d8617089f012f3bb84b8703">
+  <file src="src/BaseValueObject/BooleanVo.php">
+    <RedundantConditionGivenDocblockType occurrences="1">
+      <code>is_bool($this-&gt;value)</code>
+    </RedundantConditionGivenDocblockType>
+  </file>
+  <file src="src/BaseValueObject/FloatVo.php">
+    <RedundantConditionGivenDocblockType occurrences="1">
+      <code>is_float($this-&gt;value)</code>
+    </RedundantConditionGivenDocblockType>
+  </file>
+  <file src="src/BaseValueObject/IntegerVo.php">
+    <RedundantConditionGivenDocblockType occurrences="1">
+      <code>is_int($this-&gt;value)</code>
+    </RedundantConditionGivenDocblockType>
+  </file>
+  <file src="src/BaseValueObject/ValueObjectInterface.php">
+    <PossiblyUnusedMethod occurrences="1">
+      <code>valid</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="tests/All/BooleanVoTest.php">
+    <PropertyNotSetInConstructor occurrences="2">
+      <code>BooleanVoTest</code>
+      <code>BooleanVoTest</code>
+    </PropertyNotSetInConstructor>
+    <UnusedClass occurrences="1">
+      <code>BooleanVoTest</code>
+    </UnusedClass>
+  </file>
+  <file src="tests/All/FloatVoTest.php">
+    <PropertyNotSetInConstructor occurrences="2">
+      <code>FloatVoTest</code>
+      <code>FloatVoTest</code>
+    </PropertyNotSetInConstructor>
+    <UnusedClass occurrences="1">
+      <code>FloatVoTest</code>
+    </UnusedClass>
+  </file>
+  <file src="tests/All/IntegerVoTest.php">
+    <PropertyNotSetInConstructor occurrences="2">
+      <code>IntegerVoTest</code>
+      <code>IntegerVoTest</code>
+    </PropertyNotSetInConstructor>
+    <UnusedClass occurrences="1">
+      <code>IntegerVoTest</code>
+    </UnusedClass>
+  </file>
+  <file src="tests/All/StringVoTest.php">
+    <PropertyNotSetInConstructor occurrences="2">
+      <code>StringVoTest</code>
+      <code>StringVoTest</code>
+    </PropertyNotSetInConstructor>
+    <UnusedClass occurrences="1">
+      <code>StringVoTest</code>
+    </UnusedClass>
+  </file>
+</files>

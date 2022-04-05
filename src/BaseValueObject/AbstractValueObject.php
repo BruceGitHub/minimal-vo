@@ -2,23 +2,23 @@
 
 declare(strict_types=1);
 
-namespace BaseValueObject\BaseValueObject;
-
+namespace MinimalVo\BaseValueObject;
 
 /**
 * @template TValue
-* @template-implements ValueObject<TValue>
-*/ 
-abstract class AbstractVo implements ValueObject
+* @template TVo
+* @template-implements ValueObjectInterface<TValue,TVo>
+*/
+abstract class AbstractValueObject implements ValueObjectInterface
 {
-    
     /** @param TValue $value */
-    public function __construct(private $value) {}
-    
-       
-   /** @return TValue */ 
-   public function vl()
-   {
-       return $this->value;
-   }
+    public function __construct(protected $value)
+    {
+    }
+
+    /** @return TValue */
+    public function vl()
+    {
+        return $this->value;
+    }
 }
