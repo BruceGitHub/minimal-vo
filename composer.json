@@ -1,0 +1,33 @@
+{
+    "name": "brucegithub/minimal-vo",
+    "description": "Minimal lib to use vo:  immutability, semantic, typed objects",
+    "type": "library",
+    "license": "MIT",
+    "config": {
+      "sort-packages": true
+    },
+    "require": {
+    },
+    "require-dev": {
+    },
+    "autoload": {
+      "psr-4": {
+        "MinimalVo\\": "src"
+      },
+      "classmap": [
+        "src"
+      ]
+    },
+    "autoload-dev": {
+      "psr-4": {
+          "Tests\\": "tests/"
+      }
+    },  
+    "authors": [
+      {
+        "name": "BruceGitHub",
+        "email": "roberto.diana@gmail.com"
+      }
+    ]
+  }
+  
