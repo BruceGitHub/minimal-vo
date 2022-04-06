@@ -5,13 +5,13 @@ declare(strict_types=1);
 namespace MinimalVo\BaseValueObject;
 
 /**
-* @template-extends AbstractValueObject<bool,BooleanVo>
+* @template-extends AbstractVo<bool,BooleanVo>
 */
-class BooleanVo extends AbstractValueObject
+final class BooleanVo extends AbstractVo
 {
     public function equal($vo): bool
     {
-        return $this->value === $vo->vl();
+        return $this->value === $vo->toValue();
     }
 
     public function duplicate()

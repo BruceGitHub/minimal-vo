@@ -1,1 +1,5 @@
 /.php-cs-fixer.cache
+/.cache/
+/vendor/
+/tools/
+.idea

@@ -11,7 +11,7 @@ class StringVoTest extends AbstractUnitTestCase
     public function it_create(): void
     {
         $sut = new StringVo('hello');
-        $this->assertSame('hello',$sut->vl());
+        $this->assertSame('hello',$sut->toValue());
     }
 
     /** @test */

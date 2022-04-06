@@ -21,5 +21,5 @@ interface ValueObjectInterface
     public function duplicate();
 
     /** @return TValue */
-    public function vl();
+    public function toValue();
 }

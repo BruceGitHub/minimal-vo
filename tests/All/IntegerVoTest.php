@@ -3,7 +3,6 @@
 namespace Tests\All;
 
 use MinimalVo\BaseValueObject\IntegerVo;
-use MinimalVo\BaseValueObject\StringVo;
 use Tests\AbstractUnitTestCase;
 
 class IntegerVoTest extends AbstractUnitTestCase
@@ -12,7 +11,7 @@ class IntegerVoTest extends AbstractUnitTestCase
     public function it_create(): void
     {
         $sut = new IntegerVo(1);
-        $this->assertSame(1,$sut->vl());
+        $this->assertSame(1,$sut->toValue());
     }
 
     /** @test */

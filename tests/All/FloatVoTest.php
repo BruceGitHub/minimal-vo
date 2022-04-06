@@ -2,9 +2,7 @@
 
 namespace Tests\All;
 
-use MinimalVo\BaseValueObject\BooleanVo;
 use MinimalVo\BaseValueObject\FloatVo;
-use MinimalVo\BaseValueObject\IntegerVo;
 use Tests\AbstractUnitTestCase;
 
 class FloatVoTest extends AbstractUnitTestCase
@@ -13,7 +11,7 @@ class FloatVoTest extends AbstractUnitTestCase
     public function it_create(): void
     {
         $sut = new FloatVo(1);
-        $this->assertSame(1,$sut->vl());
+        $this->assertSame(1,$sut->toValue());
     }
 
     /** @test */

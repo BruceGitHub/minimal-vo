@@ -5,13 +5,13 @@ declare(strict_types=1);
 namespace MinimalVo\BaseValueObject;
 
 /**
-* @template-extends AbstractValueObject<float,FloatVo>
+* @template-extends AbstractVo<float,FloatVo>
 */
-class FloatVo extends AbstractValueObject
+final class FloatVo extends AbstractVo
 {
     public function equal($vo): bool
     {
-        return $this->value === $vo->vl();
+        return $this->value === $vo->toValue();
     }
 
     public function duplicate()

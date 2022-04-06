@@ -11,14 +11,14 @@ class BooleanVoTest extends AbstractUnitTestCase
     public function it_create_true(): void
     {
         $sut = new BooleanVo(true);
-        $this->assertSame(true,$sut->vl());
+        $this->assertSame(true,$sut->toValue());
     }
 
     /** @test */
     public function it_create_false(): void
     {
         $sut = new BooleanVo(false);
-        $this->assertSame(false,$sut->vl());
+        $this->assertSame(false,$sut->toValue());
     }
 
     /** @test */

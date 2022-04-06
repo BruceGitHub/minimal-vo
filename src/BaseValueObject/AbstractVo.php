@@ -9,7 +9,7 @@ namespace MinimalVo\BaseValueObject;
 * @template TVo
 * @template-implements ValueObjectInterface<TValue,TVo>
 */
-abstract class AbstractValueObject implements ValueObjectInterface
+abstract class AbstractVo implements ValueObjectInterface
 {
     /** @param TValue $value */
     public function __construct(protected $value)
@@ -17,7 +17,7 @@ abstract class AbstractValueObject implements ValueObjectInterface
     }
 
     /** @return TValue */
-    public function vl()
+    public function toValue()
     {
         return $this->value;
     }
