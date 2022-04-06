@@ -15,7 +15,7 @@ services:
       XDG_CACHE_HOME: "./.cache/"
 
   composer:
-    image: composer:2.1.9
+    image: composer:2.3
     command: ["composer", "install"]
     user: '1000'
     volumes:
