@@ -13,8 +13,6 @@ interface ValueObjectInterface
     /** @param TVo $vo */
     public function equal($vo): bool;
 
-    public function valid(): bool;
-
     /**
      * @return TVo
      */
