@@ -19,7 +19,7 @@ final class BooleanVo extends AbstractVo
         return new self($this->value);
     }
 
-    public function valid(): bool
+    protected function valid(): bool
     {
         return is_bool($this->value);
     }

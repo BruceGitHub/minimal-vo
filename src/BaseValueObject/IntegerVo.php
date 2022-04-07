@@ -19,7 +19,7 @@ final class IntegerVo extends AbstractVo
         return new self($this->value);
     }
 
-    public function valid(): bool
+    protected function valid(): bool
     {
         return is_int($this->value);
     }

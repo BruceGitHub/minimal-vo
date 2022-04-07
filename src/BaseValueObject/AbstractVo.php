@@ -14,7 +14,10 @@ abstract class AbstractVo implements ValueObjectInterface
     /** @param TValue $value */
     public function __construct(protected $value)
     {
+        $this->valid();
     }
+
+    abstract protected function valid(): bool;
 
     /** @return TValue */
     public function toValue()
