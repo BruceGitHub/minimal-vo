@@ -18,6 +18,10 @@
         "roave/security-advisories": "dev-master",
         "vimeo/psalm": "^4.4"
     },
+    "suggest": {
+      "vimeo/psalm": "Psalm is a static analysis tool for finding errors in PHP applications",
+      "phpstan/phpstan": "PHPStan - PHP Static Analysis Tool"
+    },
     "autoload": {
       "psr-4": {
         "MinimalVo\\": "src"
