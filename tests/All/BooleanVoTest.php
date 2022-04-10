@@ -45,5 +45,12 @@ class BooleanVoTest extends AbstractUnitTestCase
         $this->assertTrue($sut1->equal($sut2));
     }
 
+    /** @test */
+    public function it_from_value(): void
+    {
+        $sut1 = BooleanVo::fromValue(true);
+        $this->assertTrue($sut1->equal($sut1));
+    }
+
 }
 

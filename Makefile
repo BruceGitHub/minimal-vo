@@ -12,10 +12,8 @@ psalm-with-issue:
 psalm-update-baseline:
 	docker-compose -f .container/docker-compose.yml exec php php ./vendor/bin/psalm --update-baseline --set-baseline=psalm-baseline.xml
 
-
 csf:
 	docker-compose -f ./.container/docker-compose.yml exec php php ./tools/php-cs-fixer/vendor/bin/php-cs-fixer fix src
-
 
 composer-shell:
 	docker-compose -f ./.container/docker-compose.yml run --rm composer sh

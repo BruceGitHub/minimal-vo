@@ -2,6 +2,7 @@
 
 namespace Tests\All;
 
+use MinimalVo\BaseValueObject\BooleanVo;
 use MinimalVo\BaseValueObject\IntegerVo;
 use Tests\AbstractUnitTestCase;
 
@@ -37,5 +38,13 @@ class IntegerVoTest extends AbstractUnitTestCase
         $sut2 = $sut1->duplicate();
         $this->assertTrue($sut1->equal($sut2));
     }
+
+    /** @test */
+    public function it_from_value(): void
+    {
+        $sut1 = IntegerVo::fromValue(1);
+        $this->assertTrue($sut1->equal($sut1));
+    }
+
 }
 

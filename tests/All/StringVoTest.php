@@ -2,6 +2,7 @@
 
 namespace Tests\All;
 
+use MinimalVo\BaseValueObject\IntegerVo;
 use MinimalVo\BaseValueObject\StringVo;
 use Tests\AbstractUnitTestCase;
 
@@ -37,5 +38,13 @@ class StringVoTest extends AbstractUnitTestCase
         $sut2 = $sut1->duplicate();
         $this->assertTrue($sut1->equal($sut2));
     }
+
+    /** @test */
+    public function it_from_value(): void
+    {
+        $sut1 = StringVo::fromValue('hello');
+        $this->assertTrue($sut1->equal($sut1));
+    }
+
 }
 

@@ -3,6 +3,7 @@
 namespace Tests\All;
 
 use MinimalVo\BaseValueObject\FloatVo;
+use MinimalVo\BaseValueObject\StringVo;
 use Tests\AbstractUnitTestCase;
 
 class FloatVoTest extends AbstractUnitTestCase
@@ -38,6 +39,12 @@ class FloatVoTest extends AbstractUnitTestCase
         $this->assertTrue($sut1->equal($sut2));
     }
 
+    /** @test */
+    public function it_from_value(): void
+    {
+        $sut1 = FloatVo::fromValue(1.0);
+        $this->assertTrue($sut1->equal($sut1));
+    }
 
 }
 

@@ -4,11 +4,15 @@ declare(strict_types=1);
 
 namespace MinimalVo\BaseValueObject;
 
+use MinimalVo\FactoryTrait\FloatVoFactoryTrait;
+
 /**
 * @template-extends AbstractVo<float,FloatVo>
 */
 final class FloatVo extends AbstractVo
 {
+    use FloatVoFactoryTrait;
+
     public function equal($vo): bool
     {
         return $this->value === $vo->toValue();
